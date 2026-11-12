@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-page-start: #FBE8EC;
+    --bg-page-end: #F7D9DF;
+    --card-surface: #FFF6F7;
+    --rose-accent: #D98A90;
+    --primary-burgundy: #7B1E45;
+    --deep-maroon: #4A1229;
+    --dark-plum: #2E0C1B;
+    --muted-text: #8A6B74;
+    --border-pink: #F0D3D9;
+    --success-green: #2E7D4F;
+    --star-gold: #F5A623;
+  }
+
+  body {
+    background: linear-gradient(180deg, #FBE8EC 0%, #F7D9DF 100%);
+    min-height: 100vh;
+    color: #2E0C1B;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom Soft Shadows and utilities */
+.shadow-aurelle {
+  box-shadow: 0 4px 20px rgba(123, 30, 69, 0.08);
+}
+
+.shadow-aurelle-lg {
+  box-shadow: 0 10px 30px rgba(123, 30, 69, 0.12);
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', 'Cinzel', Georgia, serif;
+}
+
+/* Custom scrollbar for mobile category row and trays */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth transitions */
+button, a, input, select {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}

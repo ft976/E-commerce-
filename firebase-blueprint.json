@@ -1,0 +1,72 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 150 },
+        "createdAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "name", "email", "createdAt"]
+    },
+    "CartItem": {
+      "title": "CartItem",
+      "description": "Item in shopping bag",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "productId": { "type": "string", "maxLength": 128 },
+        "size": { "type": "string", "maxLength": 20 },
+        "color": { "type": "string", "maxLength": 50 },
+        "quantity": { "type": "integer" },
+        "updatedAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "productId", "size", "color", "quantity", "updatedAt"]
+    },
+    "WishlistItem": {
+      "title": "WishlistItem",
+      "description": "Liked outfit in wishlist",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "productId": { "type": "string", "maxLength": 128 },
+        "createdAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "productId", "createdAt"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Placed order record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "orderNumber": { "type": "string", "maxLength": 50 },
+        "total": { "type": "integer" },
+        "status": { "type": "string", "maxLength": 50 },
+        "createdAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "orderNumber", "total", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "User profile document"
+    },
+    "/users/{userId}/cartItems/{itemId}": {
+      "schema": { "$ref": "#/entities/CartItem" },
+      "description": "User shopping bag items subcollection"
+    },
+    "/users/{userId}/wishlistItems/{itemId}": {
+      "schema": { "$ref": "#/entities/WishlistItem" },
+      "description": "User saved wishlist items subcollection"
+    },
+    "/users/{userId}/orders/{orderId}": {
+      "schema": { "$ref": "#/entities/Order" },
+      "description": "User orders subcollection"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "ai-studio-applet",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "clean": "next clean"
+  },
+  "dependencies": {
+    "@google/genai": "latest",
+    "@hookform/resolvers": "latest",
+    "@libsql/client": "latest",
+    "autoprefixer": "latest",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "drizzle-orm": "latest",
+    "firebase": "latest",
+    "lucide-react": "latest",
+    "motion": "latest",
+    "next": "15.0.3",
+    "postcss": "latest",
+    "react": "19.0.0-rc-6660ad59-20241128",
+    "react-dom": "19.0.0-rc-6660ad59-20241128",
+    "tailwind-merge": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@tailwindcss/typography": "latest",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "latest",
+    "eslint-config-next": "15.0.3",
+    "firebase-tools": "latest",
+    "tailwindcss": "latest",
+    "tw-animate-css": "latest",
+    "typescript": "latest"
+  }
+}

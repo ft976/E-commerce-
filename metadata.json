@@ -1,0 +1,6 @@
+{
+  "name": "AURELLE - Modern Ethnic & Western Wear",
+  "description": "Wear your mood. Own your style. Modern feminine Indian ethnic and western wear fashion storefront.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
